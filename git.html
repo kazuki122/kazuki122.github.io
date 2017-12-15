@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ギットハブの使い方</title>
+</head>
+<body>
+  <form action="">
+    <label for="osusi">Githubの使い方</label>
+    <select name="osusi" id="osusi">
+      <option value="">選択してください</option>
+      <option value="maguro.html">まぐろ</option>
+      <option value="sarmon.html">サーモン</option>
+      <option value="egg.html">たまご</option>
+      <option value="git.html">Githubの使い方</option>
+    </select>
+  </form>
+  <img src="オクトキャット.jpg" alt="">
+  <h2><p>Githubの使い方について</p></h2>
+  <p>ローカルのPC上にローカルリポジトリを作成します。</p>
+    <p>この時に使用する「git init」コマンドはGitリポジトリを新たに作成するコマンドです。</p>
+    <p>作ったファイルをインデックスに追加するときは「git add」コマンドを使います。</p>
+    <p>インデックスに追加されたファイルをコミットするには「git commit」コマンドを使用します。</p>
+    <p>「git status」コマンドを使い、ファイルが追加されているか確認しましょう。</p>
+    <p>そして、Githubに上げるためには「git push」コマンドを使用します。</p>
+    <p>これでアップロードは完了です。お疲れ様。</p>
+    <p>
+    </p>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      document.getElementById('osusi').addEventListener('change', function(){
+        location.href = 'https://kazuki122.github.io/' + this.value;
+      });
+    });
+  </script>
+</body>
+</html>
