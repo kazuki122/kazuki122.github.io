@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>好きなお寿司のネタ</title>
+</head>
+<body>
+  <form action="">
+    <label for="osusi">好きなネタ：</label>
+    <select name="osusi" id="osusi">
+      <option value="1">まぐろ</option>
+      <option value="2">サーモン</option>
+      <option value="3">たまご</option>
+    </select>
+  </form>
+  <img src="サーモン.jpg" alt="">
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      document.getElementById('osusi').addEventListener('chang', function(){
+        location.href = 'https://kazuki122.github.io/' + this.value;
+      })
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p>私の誕生日は１２月２６日です</p>
+  <p>私の次の誕生日まで後<span id="birth">数字</span>日です。</p>
+
+  <script>
+    var bir = new Date(2017, 11, 26, 0,0);
+    var now = new Date();
+    var bir1 = bir.getTime() - now.getTime;
+
+        //console.log(now.getTime());
+
+      bir1 = bir1/(1000*60*60*24);
+      bir1 = Math.ceil(bir1);
+
+      //console.log(bir1);
+
+      document.getElementById("birth").textContent= bir1;
+
+  </script>
+</body>
+</html>
