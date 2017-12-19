@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Documentオブジェクトテスト用コード</title>
+<style>
+    #image{
+        height: 300px;
+        width: 300px;
+    }
+</style>
+<script>
+window.addEventListener("load", function(){
+
+    // 画像インデックス
+    var imageIndex = 0;
+
+    // リスナー登録
+    document.getElementsByTagName("button")[0].addEventListener("click", function(){
+        // 画像イメージをインクリメント
+        if (imageIndex < 3) {
+            imageIndex++;
+        } else {
+            imageIndex = 0;
+        }
+        // 画像srcを変更
+        switch(imageIndex) {
+            case 0:
+                imageSrc = "./images/cat1.jpg";
+                break;
+            case 1:
+                imageSrc = "./images/cat2.jpg";
+                break;
+            case 2:
+                imageSrc = "./images/桜.jpg";
+                break;
+            case 3:
+                imageSrc = "./images/白神.jpg";
+                break;
+        }
+        document.getElementById("image").src = imageSrc;
+
+    }, false);
+});
+</script>
+</head>
+<body>
+    <form action="">
+        <label for="osusi">お気に入りの画像</label>
+        <select name="osusi" id="osusi">
+            <option value="">選択してください</option>
+            <option value="maguro.html">まぐろ</option>
+            <option value="sarmon.html">サーモン</option>
+            <option value="egg.html">たまご</option>
+            <option value="git.html">Githubの使い方</option>
+            <option value="images.html">お気に入りの画像</option>
+        </select>
+    </form>
+<button>画像を変更</button>
+<p><img id ="image" src="./images/cat1.jpg" alt="猫" /></p>
+<script>
+        document.addEventListener('DOMContentLoaded', function(){
+          document.getElementById('osusi').addEventListener('change', function(){
+            location.href = 'https://kazuki122.github.io/' + this.value;
+          });
+        });;
+      </script>
+</body>
+</html>
