@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Windowsの使い方</title>
+</head>
+<style>
+  .title{
+    text-decoration: underline;
+  }
+  .code{
+    padding: 10px;
+    font-size: 22px;
+    border: solid 2px;
+    background-color: rgba(20, 240, 229, 0.3);
+  }
+  table{
+    border-color: green;
+    border-collapse: collapse;
+  }
+  .bo{
+    border: solid 2px black;
+  }
+</style>
+<body>
+    <form action="">
+        <label for="osusi">メニューから項目を選択してください</label>
+        <select name="osusi" id="osusi">
+          <option value="">選択してください</option>
+          <option value="maguro.html">まぐろ</option>
+          <option value="sarmon.html">サーモン</option>
+          <option value="egg.html">たまご</option>
+          <option value="git.html">Githubの使い方</option>
+          <option value="images.html">お気に入りの画像</option>
+          <option value="kadaiUserAgent.html">ブラウザの判定</option>
+          <option value="kadaiTimer.html">タイマー</option>
+        </select>
+      </form>
+      <h2 class="title">windows.open()の使い方</h2>
+      <p>windows.open()とは新たなウィンドウを生成できます。</p>
+      <div class="code">windows.open(url, ウィンドウ名, [オプション])</div>
+      <p>第１引数の「url」は生成されるウィンドウに表示するページのURLです。<br>
+      指定しない場合は「about:blank」の新たなウィンドウを開きます。</p>
+      <p>第２引数の「ウィンドウ名」は_blankや_selfなどのターゲット属性値などを指定します。<br>
+      特に指定する必要がなければnullで良いです。</p>
+      <p>第３引数の「オプション」は新たに開くウィンドウの表示スタイルを指定します。カンマで区切ることにより、複数指定できます。</p>
+      <p>主に使われるのは以下のパラメータになります。</p>
+      <table border="2">
+        <tr>
+          <th>パラメーター</th>
+          <th>値</th>
+          <th>意味</th>
+        </tr>
+        <tr>
+          <td>width</td>
+          <td>数値</td>
+          <td>ウィンドウ幅</td>
+        </tr>
+        <tr>
+            <td>height</td>
+            <td>数値</td>
+            <td>ウィンドウ高さ</td>
+        </tr>
+        <tr>
+            <td>left</td>
+            <td>数値</td>
+            <td>ウィンドウ位置左</td>
+        </tr>
+        <tr>
+            <td>top</td>
+            <td>数値</td>
+            <td>ウィンドウ位置上</td>
+        </tr>
+        <tr>
+            <td>menubar</td>
+            <td>yes/no</td>
+            <td>メニューバーの有無</td>
+        </tr>
+        <tr>
+            <td>toolbar</td>
+            <td>yes/no</td>
+            <td>ツールバーの有無</td>
+        </tr>
+        <tr>
+            <td>scrollbars</td>
+            <td>yes/no</td>
+            <td>スクロールバーの有無</td>
+        </tr>
+      </table>
+      <h3 class="title">サンプル</h3>
+      <div class="sample">
+          <button onclick="sampleOpen()">新規ウィンドウ</button>
+      </div>
+      <h3 class="title">サンプルのソースコード</h3>
+      <div class="code">
+        function sampleOpen() {
+          window.open(<br>
+              '',
+              '_blank',
+              'menubar=0,width=500,height=300,top=100,left=100'
+          );
+      
+      }</div>
+
+      <p class="bo"></p>
+
+      <h2 class="title" >windows.close()について</h2>
+      <p>windows.close()はウィンドウを閉じることができます。</p>
+      <h3 class="title">サンプル</h3>
+      <div class="sample">
+          <button onclick="sampleOpen()">新規ウィンドウ</button>
+          <button onclick="sampleClose()">ウィンドウを閉じる</button>
+      </div>
+      <h3 class="title">サンプルのソースコード</h3>
+      <div class="code">
+          function sampleOpen() {
+            sampleWindow = window.open(
+                '',
+                '_blank',
+                'menubar=0,width=500,height=300,top=100,left=100'
+            );
+        
+        }<br>
+        function sampleClose() {
+          sampleWindow.close();
+        }
+      </div>
+
+      <p class="bo"></p>
+
+      <h2 class="title">windows.focus()について</h2>
+      windows.focus()は、ウィンドウにフォーカスを当てるメソッド。
+      <h3 class="title">サンプル</h3>
+      <div class="sample">
+        <button onclick="sampleFocus()">ウィンドウを開く</button>
+      </div>
+      <h3 class="title">サンプルのソースコード</h3>
+      <div class="code">
+          function sampleFocus(){
+            sampleWindow = window.open(
+                  '',
+                  '_blank',
+                  'menubar=0,width=500,height=300,top=100,left=100'
+              );<br>
+            sampleWindow.document.write("サンプルウィンドウ");
+          sampleWindow.focus();
+          }
+      </div>
+
+      <script type="text/javascript">
+        function sampleOpen() {
+            sampleWindow = window.open(
+                '',
+                '_blank',
+                'menubar=0,width=500,height=300,top=100,left=100'
+            );
+        
+        }
+        function sampleClose() {
+          sampleWindow.close();
+        }
+        function sampleFocus(){
+          sampleWindow = window.open(
+                '',
+                '_blank',
+                'menubar=0,width=500,height=300,top=100,left=100'
+            );
+          sampleWindow.document.write("サンプルウィンドウ");
+        sampleWindow.focus();
+        }
+        </script>
+</body>
+</html>

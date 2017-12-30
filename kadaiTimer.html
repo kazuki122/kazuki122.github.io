@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Timer設定</title>
+</head>
+<body>
+    <form action="">
+        <label for="osusi">メニューから項目を選択してください</label>
+        <select name="osusi" id="osusi">
+          <option value="">選択してください</option>
+          <option value="maguro.html">まぐろ</option>
+          <option value="sarmon.html">サーモン</option>
+          <option value="egg.html">たまご</option>
+          <option value="git.html">Githubの使い方</option>
+          <option value="images.html">お気に入りの画像</option>
+          <option value="kadaiUserAgent.html">ブラウザの判定</option>
+          <option value="windows.html">windows.openなどの説明</option>
+        </select>
+      </form>
+  <form name="timer">
+    <p>※数字は半角で入力してください</p>
+  <input type="text" value="">分
+  <input type="text" value="">秒
+  <input type="button" value="開始" onclick="CountSt()">
+  </form>
+  
+  <script>
+    var timerSt;
+
+
+function CountSt()
+{
+  document.timer.elements[2].disabled=true;
+  timerSt=setInterval("countDown()",1000);
+}
+
+function cntStop()
+{
+  document.timer.elements[2].disabled=false;
+  clearInterval(timerSt);
+}
+
+function countDown()
+{
+  var min=document.timer.elements[0].value;
+  var sec=document.timer.elements[1].value;
+  
+  if( (min=="") && (sec=="") )
+  {
+    alert("時間を設定してください！");
+    reSet();
+  }
+  else
+  {
+    if (min=="") min=0;
+    min=parseInt(min);
+    
+    if (sec=="") sec=0;
+    sec=parseInt(sec);
+    
+    tmWrite(min*60+sec-1);
+  }
+}
+
+function tmWrite(int)
+{
+  int=parseInt(int);
+  
+  if (int<=0)
+  {
+    reSet();
+    alert("時間になりました！");
+  }
+  else
+  {
+    document.timer.elements[0].value=Math.floor(int/60);
+    document.timer.elements[1].value=int % 60;
+  }
+}
+function reSet()
+            {
+              document.timer.elements[0].value="0";
+              document.timer.elements[1].value="0";
+              document.timer.elements[2].disabled=false;
+              clearInterval(timerSt);
+            }  
+
+  </script>
+</body>
+</html>

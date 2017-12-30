@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="osusi">あなたの好きなネタは？</label>
+        <select name="osusi" id="osusi">
+          <option value="">選択してください</option>
+          <option value="maguro.html">まぐろ</option>
+          <option value="sarmon.html">サーモン</option>
+          <option value="egg.html">たまご</option>
+          <option value="git.html">Githubの使い方</option>
+          <option value="images.html">お気に入りの画像</option>
+        </select>
+      </form>
+  <script>
+    
+    var userAgent = navigator.userAgent;
+    var cutSt,cutEd;
+    var bwVer;
+    
+    //Operaか調べる
+    if ( userAgent.indexOf("Opera") != -1 )
+    {
+      cutSt = userAgent.indexOf("Version");
+      cutEd   = userAgent.length;
+      
+      bwVer = userAgent.substring(cutSt+8,cutEd);
+      
+      document.write("Opera "+ bwVer);
+    }
+    
+    if ( userAgent.indexOf("Safari") != -1 )
+    {
+      //「Chrome」が含まれるか調べる
+      if ( userAgent.indexOf("Chrome") != -1 )
+      {
+        cutSt = userAgent.indexOf("Chrome");
+        cutEd   = userAgent.indexOf(" ",cutSt);
+        
+        bwVer = userAgent.substring(cutSt+7,cutEd);
+        
+        document.write("Google Chrome "+bwVer);
+      }
+      else
+      {
+        cutSt = userAgent.indexOf("Version");
+        cutEd   = userAgent.indexOf(" ",cutSt);
+        
+        bwVer = userAgent.substring(cutSt+8,cutEd);
+        
+        document.write("Safari "+bwVer);
+      }
+    }
+    
+    </script>
+</body>
+</html>
