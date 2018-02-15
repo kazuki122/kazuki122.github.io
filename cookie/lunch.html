@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="magical">
+    <p>ランチメニューを下記からお選びください</p>
+    <form name="kadai7_form" action="radio">
+
+      <input type="radio" name="radio" value="蒙古タンメン" />蒙古タンメン
+      <br>
+      <input type="radio" name="radio" value="一楽ラーメン" />一楽ラーメン
+      <br>
+      <input type="radio" name="radio" value="節骨ラーメン" />節骨ラーメン
+      <br>
+      <p>オプションはいかがですか？</p>
+      <input type="checkbox" name="check" id="oomori">大盛
+      <br>
+      <input type="checkbox" name="check" id="gohan">チャーシュー飯
+      <br>
+      <input type="checkbox" name="check" id="hangohan">半チャーハン
+      <br>
+      <input type="checkbox" name="check" id="g">餃子
+      <br>
+    </form>
+    <input type="button" value="注文する" onclick="kadai7()">
+  </div>
+
+  <script type="text/javascript">
+    function kadai7() {
+      for (var i = 0; i < kadai7_form.radio.length; i++) {
+        if (kadai7_form.radio[i].checked == true) {
+
+          var rnc = kadai7_form.radio[i].value;
+
+          var set1 = kadai7_form.check[0].checked;
+          var set2 = kadai7_form.check[1].checked;
+          var set3 = kadai7_form.check[2].checked;
+          var set4 = kadai7_form.check[3].checked;
+
+          var text = "";
+          var text2 = "";
+          if (set1 == true) {
+            text = text + "\n" + '大盛';
+            text2 = text2 + '大盛';
+          }
+          if (set2 == true) {
+            text = text + "\n" + 'チャーシュー飯';
+            text2 = text2 + 'チャーシュー飯';
+          }
+          if (set3 == true) {
+            text = text + "\n" + '半チャーハン';
+            text2 = text2 + '半チャーハン';
+          }
+          if (set4 == true) {
+            text = text + "\n" + '餃子';
+            text2 = text2 + '餃子';
+          }
+          alert("ご注文は" + "\n" + rnc + text + "\n" + "ですね？")
+         
+          document.cookie = document.cookie + rnc + text2 + ";max-age=3;path=/"
+
+          var miracle = document.cookie;
+          if (miracle >= rnc) {
+            document.getElementById('magical').textContent ='注文済みです';
+            setTimeout(function () {
+              alert("ヘイ!お待ち！");
+            }, 3000); break;
+          }
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  pre{
+    background-color: aqua;
+    font-size: 120%;
+  }
+</style>
+<body>
+  <h2>jQueryの詳細説明</h2>
+  <pre>$( 'input[name="optionsRadios"]:radio' ).change( function() {</pre>
+    <p>ここでラジオボタンのイベント監視を行っています。<br>
+    そのあとに</p>
+  <pre>var radioval = $(this).val();</pre>
+  <p>として、選択されたラジオボタンのvalueを変数radiovalに入れています。<br>
+    ラジオボタンの選択が変わるたびにそのvalueがこの変数に入ってきます。
+  </p>
+  <pre>if(radioval == 5){</pre>
+    <p>valueが「５」、つまり「その他」が選ばれているときにこのif文を実行するということです。
+    </p>
+    <pre>if(radioval == 5){
+        $('#inputother').removeAttr('disabled');</pre>
+        <p>ここではidのinputotherの要素にある属性「disabled」を削除するという内容になっています。</p>
+        <pre>}else{
+            $('#inputother').attr('disabled','disabled'); 
+         }</pre>
+         <p>ここではif文の中とは逆に属性を付与しています。そのため、再び要素が無効化されるというわけでです。</p>
+</body>
+</html>

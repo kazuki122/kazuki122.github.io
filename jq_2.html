@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  pre{
+    background-color: aqua;
+  }
+</style>
+<body>
+  <h2>jQuery詳細</h2>
+  <p>animate関数を使用し、マウスオーバーしたら右のマージンを140pxにし、マウスが外れたら0になるようにしています。</p>
+  <pre>$(function() {
+      $('#slideR').hover(
+      function(){
+        $(this).animate({'marginRight':'140px'},500);
+      },
+      function () {
+        $(this).animate({'marginRight':'0'},500);
+      }
+    );
+});</pre>
+</body>
+</html>
