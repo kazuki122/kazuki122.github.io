@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="page1.css">
+  <title>ページ</title>
+</head>
+<body>
+  <header>
+  <h1>My Profile</h1>
+</header>
+
+<div id="main">
+  <div class="title">
+  <h2>名前</h2>
+  </div>
+  <h2><ruby>田附<rt>たつき</rt> 和輝<rt> かずき</rt></ruby></h2>
+
+  <div class="title">
+    <h2>生年月日</h2>
+  </div>
+  <h2>1998年12月26日</h2>
+
+  <div class="title">
+    <h2>年齢</h2>
+  </div>
+  <h2>19歳</h2>
+
+  <div class="title">
+    <h2 id="syussin">出身地</h2>
+  </div>
+  <h2>青森県出身</h2>
+
+  <div class="title">
+    <h2 id="syumi">趣味</h2>
+  </div>
+  <h2>スキー、野球</h2>
+
+  <div class="title">
+    <h2 id="fun">最近の楽しみ</h2>
+  </div>
+  <h2>日めくりカレンダーをめくること</h2>
+
+<div class="title">
+  <h2 id="like">好きなもの</h2>
+</div>
+<div id="pic"><h2>食べ物は麺類（ラーメンや、うどんなど）、納豆巻き、クレープ、etc...<br>
+  動物はネコ
+  <img src="images/nyan.jpg" alt="ネコ" width="500" height="380"  id="cat">
+</h2>
+<p>※写真は実家で飼っている猫です。</p>
+</div>
+<div class="title">
+  <h2></h2>
+</div>
+
+<nav id="slideR">
+    <span class="nav-icon"><i class="fa fa-heart-o"></i></span>
+    <ul>
+      <li><a href="#">ページTopへ</a></li>
+      <li><a href="#syussin">出身地</a></li>
+      <li><a href="#syumi">趣味</a></li>
+      <li><a href="#fun">最近の楽しみ</a></li>
+      <li><a href="#like">好きなもの</a></li>
+    </ul>
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+    </script>
+<script>
+//マウスオーバーで表示
+$(function() {
+    $('#slideR').hover(
+    function(){
+      $(this).animate({'marginRight':'140px'},500);
+    },
+    function () {
+      $(this).animate({'marginRight':'0'},500);
+    }
+  );
+});
+    </script>
+</body>
+</html>
