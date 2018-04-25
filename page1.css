@@ -1,3 +1,7 @@
+body{
+  background-color: rgba(68, 156, 184, 0.4);
+}
+
 header{
   color: #6cb4e4;
   text-align: center;
@@ -7,17 +11,24 @@ header{
   background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
   background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
 }
+
+h1{
+  font-style: italic;
+}
+
 .title{
 padding: 1px 1px;
   margin: 10px 20px 5px 20px;
   color: #494949;
   background: #f4f4f4;
   border-left: solid 5px #6cb4e4;
-  border-bottom: solid 3px #d7d7d7;
+  border-bottom: solid 3px #d7d7d7
 }
+
 h2, p{
   margin-left: 25px;
 }
+
 #slideR {
   z-index: 99;
   cursor: pointer;
@@ -50,4 +61,7 @@ h2, p{
 }
 #pic{
   overflow: auto;
+}
+.line{
+  text-decoration: line-through;
 }
