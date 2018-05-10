@@ -1,0 +1,35 @@
+/*メインコンテンツ*/
+main{
+  text-align: center;
+}
+
+header h1{
+  float: left;
+}
+
+nav {
+  float: right;
+}
+
+.pic{
+  float: left;
+  margin-right: 20px;
+  padding-top: 20px;
+
+}
+
+sub{
+  overflow: hidden;
+  position: relative;
+  left: 200px;
+  float: left;
+}
+
+#midasi{
+  clear: both;
+}
+
+#button{
+  width: 150px;
+  height: 50px;
+}
