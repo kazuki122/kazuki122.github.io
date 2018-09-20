@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+
+@media screen and (max-width: 767px) { 
+
+#main_cont{
+  background-color: rgba(57, 103, 196, 0.3);
+  border-radius: 5%;
+  padding: 1rem;
+}
+
+.tokutyo{
+  width: 200px;
+  margin: auto;
+}
+
+.img_ic{
+  padding-top: 3rem;
+}
+.jyugyou, .sikaku_syuusyoku, .message, .contact{
+  background-color: #000;
+}
+.jyugyou{
+  background-image: url(../img/img_system_photo.jpg);
+  height: 90px;
+  width: 300px;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  background-size: cover;
+  position: relative;
+}
+.jyugyou p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  color: #ffffff;
+  font-size: 2rem;
+  text-shadow: 2px 8px 6px rgba(57, 103, 196, 0.9),
+  0px -5px 16px rgba(57, 103, 196, 0.9);
+}
+.admission{
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+}
+.sikaku_syuusyoku{
+  background-image: url(../img/bg_admission_kv.png);
+  height: 90px;
+  width: 300px;
+  background-size: cover;
+  position: relative;
+}
+.sikaku_syuusyoku p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  color: #ffffff;
+  font-size: 2rem;
+  text-shadow: 2px 8px 6px rgba(57, 103, 196, 0.9),
+  0px -5px 16px rgba(57, 103, 196, 0.9);
+}
+.message{
+  background-image: url(../img/img_list_jbusiness.jpg);
+  height: 90px;
+  width: 300px;
+  background-size: cover;
+  position: relative;
+}
+.message p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  word-break: keep-all;
+  color: #ffffff;
+  font-size: 2rem;
+  text-shadow: 2px 8px 6px rgba(57, 103, 196, 0.9),
+  0px -5px 16px rgba(57, 103, 196, 0.9);
+}
+
+.cont_form{
+  display: flex;
+  justify-content: center;
+  padding: 7rem;
+}
+.contact{
+  background-image: url(../img/bg_contact_kv.png);
+  height: 90px;
+  width: 300px;
+  background-size: cover;
+  position: relative;
+}
+.contact p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  word-break: keep-all;
+  color: #ffffff;
+  font-size: 2rem;
+  text-shadow: 2px 8px 6px rgba(57, 103, 196, 0.9),
+  0px -5px 16px rgba(57, 103, 196, 0.9);
+}
+.jyugyou:hover, .sikaku_syuusyoku:hover, .message:hover, .contact:hover{
+  cursor:pointer;
+  filter: alpha(opacity=60);        /* ie lt 8 */
+  -ms-filter: "alpha(opacity=60)";  /* ie 8 */
+  -moz-opacity:0.6;                 /* FF lt 1.5, Netscape */
+  -khtml-opacity: 0.6;              /* Safari 1.x */
+  opacity:0.6;
+  zoom:1;
+}
+}

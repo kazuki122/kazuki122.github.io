@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+@media screen and (max-width: 767px) {
+
+  .webtitle{
+    background-color: rgba(57, 103, 196, 0.6);
+    color: black;
+  }
+
+}

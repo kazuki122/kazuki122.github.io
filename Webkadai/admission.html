@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/admission.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+
+  <title>盛岡情報ビジネス専門学校|資格取得・就職実績</title>
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="MCL盛岡情報ビジネス専門学校　Webアプリケーションコース" id="topimg">
+    
+        <div class="cp_cont">
+         <div class="cp_offcm01">
+         <input type="checkbox" id="cp_toggle01">
+         <label for="cp_toggle01"><span></span></label>
+         <div class="cp_menu">
+         <ul>
+            <li><a href="Top.html">Top</a></li>
+            <li><a href="jyugyou.html">授業内容</a></li>
+            <li><a href="admission.html">資格取得<br>就職実績</a></li>
+            <li><a href="senpai.html">先輩方の声</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+         </ul>
+         </div>
+         </div>
+       </div>
+       </header>
+       
+       <h2 class="webtitle">資格取得</h2>
+       <h3 class="subtitle">モリジョビで目指せる資格</h3>
+       <p class="ssubtitle">共にIT業界で一目置かれるような資格の取得を目指そう！</p>
+       <div class="backcolor">
+       <p class="sikakutit">経済産業省国家資格：ITパスポート試験</p>
+       <p class="text">ITパスポート試験は経済産業省が認定する、国家試験です。「パソコン操作ができる」、「表計算ソフトを使ってデータを処理できる」というレベルには留まらず、これからの社会人にとって必要な、ITを正しく理解し、積極的に活用する知識を身につけます。</p>
+       </div>
+       <div class="backcolor">
+       <p class="sikakutit">経済産業省国家資格：基本情報技術者試験</p>
+       <p class="text">プログラマー・システムエンジニアなど職業につく人が受験する資格で、試験ではIT業界で働くために必要な基本的知識を持っているか、情報処理に必要な論理的な考え方はできるかなどが問われる問題が出題されます。また経営や管理についてもある程度の知識が問われるため、試験勉強を通して全般的なIT力の向上が望めます</p>
+       </div>
+       <div class="backcolor">
+       <p class="sikakutit">経済産業省国家資格：応用情報技術者試験</p>
+       <p class="text">独立行政法人「情報処理推進機構」(IPA)が主催し、経済産業大臣が認定する国家資格「情報処理技術者試験」の12ある区分の中の一つです。ITエンジニアとして応用的な知識・技能を有することを国が合格者に対して証明する資格です</p>
+       </div>
+       <div class="backcolor">
+       <p class="sikakutit">Javaプログラミング能力検定</p>
+       <p class="text">Javaプログラミング能力認定試験とは、Javaに関する基本知識を有し､オブジェクト指向に基づくアプレットやアプリケーションプログラムを作成できる能力を認定する資格です。</p>
+       </div>
+       <div class="backcolor">
+       <p class="sikakutit">その他</p>
+       <div class="side">
+       <ul>
+         <li>Webクリエイター検定</li>
+         <li>Java SE8 Programmer試験</li>
+         <li>Microsoft Office Specialist</li>
+       </ul>
+       <p>など</p>
+       </div>
+       </div>
+
+       <h2 class="webtitle">就職実績</h2>
+       <div class="span">
+       <span class="subttl">就職率</span>
+       </div>
+       <div class="perChart">
+       <h1 class="per">100%</h1>
+       <div id="Chart">
+       <canvas id="myChart"></canvas>
+       </div>
+       </div>
+       <span class="ssubttl">主な就職先</span>
+       <div class="backcolor">
+         <div class="side">
+       <ul>
+         <li>ヤフー株式会社</li>
+         <li>セコム株式会社</li>
+         <li>株式会社IIJエンジニアリング</li>
+         <li>NTTコムエンジニアリング(株)</li>
+         <li>(株)アドバンストラフィックシステムズ</li>
+         <li>株式会社アイシーエス</li>
+       </ul>
+       <p>など</p>
+       </div>
+       </div>
+       <div class="footer">
+          <img src="img/logo_mcl.png" alt="">
+          <p>盛岡情報ビジネス専門学校 </p>
+        </div>
+
+       
+       <script>
+       var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+  type: 'pie',
+  data: {
+    labels: ["IT系", "非IT系"],
+    datasets: [{
+      backgroundColor: [
+        "#95a5a6",
+        "#e74c3c"
+      ],
+      data: [68, 32]
+    }]
+  }
+});</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+@media screen and (max-width: 767px) {
+
+  .webtitle{
+    background-color: rgba(57, 103, 196, 0.6);
+    color: black;
+  }
+
+  .subtitle{
+    text-align: center;
+    padding-top: 20px;
+  }
+  .ssubtitle{
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .backcolor{
+    width: 400px;
+    margin: auto;
+    background-color: rgba(57, 103, 196, 0.5);
+    border-radius: 5%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  .sikakutit{
+    font-weight: bold;
+  }
+  .text{
+    padding-top: 5px;
+    letter-spacing: 1px;
+  }
+  .side{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 60px;
+  }
+  .side p{
+    align-self: flex-end;
+  }
+
+
+  .subttl{
+    border: solid 1px black;
+    
+    font-size: 30px;
+    margin-left: 20px;
+    padding: 3px;
+  }
+  .span{
+    margin-top: 40px;
+    margin-left: 50px;
+  }
+  .perChart{
+    display: flex;
+  }
+  .per{
+    font-size: 60px;
+    align-self: center;
+    margin-left: 40px;
+  }
+  #Chart{
+    width: 400px;
+    height: 200px;
+  }
+  .ssubttl{
+    border: solid 1px black;
+    font-size: 30px;
+    margin-left: 50px;
+    padding: 3px;
+  }
+}
