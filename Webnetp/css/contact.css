@@ -88,4 +88,9 @@ textarea{
   padding-top: 10px;
   padding-bottom: 10px;
 }
-
+.kp:nth-child(2){
+ margin-right: 6px;
+}
+.kp:nth-child(3){
+margin-left: 2px;
+}
