@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+@media screen and (min-width: 768px){
+  #button{
+    margin: 25px;
+  }
+  .button_s{
+    padding: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .req{
+    color: red;
+  }
+  input.focused:invalid {  
+    border-color: red;
+    /*&:focus {
+      box-shadow: 0 1px 0 0 red;
+    }*/
+  }
+  textarea.focused:invalid {  
+    border-color: red;
+    /*&:focus {
+      box-shadow: 0 1px 0 0 red;
+    }*/
+  }
+
+  .form_c{
+    text-align: center;
+    line-height: 2rem;
+  }
+textarea{
+  vertical-align: top;
+}
+
+.kp{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.kp:nth-child(2){
+  margin-right: 80px;
+}
+.kp:nth-child(3){
+  margin-right: 40px;
+}
+
+}
+
+@media screen and (max-width: 767px) {
+  #button{
+    margin: 25px;
+  }
+  .button_s{
+    padding: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+  .req{
+    color: red;
+  }
+  input.focused:invalid {  
+    border-color: red;
+    /*&:focus {
+      box-shadow: 0 1px 0 0 red;
+    }*/
+  }
+  textarea.focused:invalid {  
+    border-color: red;
+    /*&:focus {
+      box-shadow: 0 1px 0 0 red;
+    }*/
+  }
+
+  .form_c{
+    text-align: center;
+    line-height: 2rem;
+  }
+textarea{
+  vertical-align: top;
+}
+
+.kp{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.kp:nth-child(2){
+  margin-right: 80px;
+}
+.kp:nth-child(3){
+  margin-right: 40px;
+}

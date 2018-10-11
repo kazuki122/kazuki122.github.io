@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+@media screen and (min-width: 768px){
+  .message{
+    text-align: center;
+  }
+  .text_m{
+    background-color: rgba(57, 103, 196, 0.6);
+  }
+  span{
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: solid 1px rgb(205, 226, 16);
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .message{
+    text-align: center;
+  }
+  .text_m{
+    background-color: rgba(57, 103, 196, 0.6);
+  }
+  span{
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: solid 1px rgb(205, 226, 16);
+  }
+}
