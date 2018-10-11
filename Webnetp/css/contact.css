@@ -75,7 +75,6 @@ textarea{
   }
 
   .form_c{
-    text-align: center;
     line-height: 2rem;
   }
 textarea{
@@ -83,6 +82,7 @@ textarea{
 }
 
 .kp{
+  text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
 }
