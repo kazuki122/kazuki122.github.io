@@ -50,6 +50,7 @@ textarea{
 
 @media screen and (max-width: 767px) {
   #button{
+    text-align: center;
     margin: 25px;
   }
   .button_s{
@@ -75,6 +76,7 @@ textarea{
   }
 
   .form_c{
+    font-size: 1.6vw;
     line-height: 2rem;
   }
 textarea{
